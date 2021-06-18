@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  nodejs:
+    image: hkdigital/nodejs-2021a   # docker-hub
+    # image: hkdigital-nodejs-2021a   # local
+
+    restart: on-failure # "no"|always|on-failure|unless-stopped
+
+    environment:
+      - HEAP_SIZE_MB=1024
+      - WATCH=1 # Use `nodemon` instead of `node`
+      - PARAMS=--radius=1 --calculation=surface
+
+    volumes:
+      - ./volumes/some-calculation:/mnt/nodejs

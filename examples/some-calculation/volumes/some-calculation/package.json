@@ -1,0 +1,16 @@
+{
+  "name": "some-calulations",
+  "title": "Some calculations",
+  "description": "NodeJS test project",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Jens Kleinhout",
+    "company": "HKdigital"
+  },
+  "license": "All rights reserved by HKdigital",
+  "dependencies": {
+    "yargs": "^15.3.1"
+  },
+  "type": "module"
+}

@@ -16,8 +16,8 @@ version: "3.8"
 
 services:
   nodejs:
-    # image: hkdigital/nodejs-2021a     # docker-hub
-    image: hkdigital-nodejs-2021a     # local    
+    image: hkdigital/nodejs-2021a     # docker-hub
+    # image: hkdigital-nodejs-2021a     # local    
 
     restart: on-failure # "no"|always|on-failure|unless-stopped
 

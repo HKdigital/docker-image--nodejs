@@ -23,7 +23,7 @@ MAINTAINER Jens Kleinhout "hello@hkdigital.nl"
 # .......................................................................... ENV
 
 # Update the timestamp below to force an apt-get update during build
-ENV APT_SOURCES_REFRESHED_AT 2021-05-23_16h25
+ENV APT_SOURCES_REFRESHED_AT 2021-09-15_10h05
 
 # ....................................................................... NodeJS
 
@@ -98,7 +98,7 @@ RUN sudo apt update && sudo apt install --no-install-recommends yarn
 #        questions/30215830/dockerfile-copy-keep-subdirectory-structure
 
 # Update the timestamp below to force copy of image-files during build
-ENV IMAGE_FILES_REFRESHED_AT 2021-05-23_17h22
+ENV IMAGE_FILES_REFRESHED_AT 2021-09-15_10h05
 
 COPY ./image-files/ /
 

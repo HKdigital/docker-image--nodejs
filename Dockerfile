@@ -23,11 +23,11 @@ MAINTAINER Jens Kleinhout "hello@hkdigital.nl"
 # .......................................................................... ENV
 
 # Update the timestamp below to force an apt-get update during build
-ENV APT_SOURCES_REFRESHED_AT 2021-09-15_10h05
+ENV APT_SOURCES_REFRESHED_AT 2021-12-14_12h40
 
 # ....................................................................... NodeJS
 
-ENV NODE_VERSION 15.8.0
+ENV NODE_VERSION 16.13.1
 
 #
 # @note gpg keys of nodejs releasers listed at
@@ -48,10 +48,11 @@ RUN set -ex \
     108F52B48DB57BB0CC439B2997B01419BD92F80A \
     B9E2F5981AA6E0CD28160D9FF13993A75599653C \
   ; do \
-    gpg --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys "$key" || \
-    gpg --keyserver hkp://ipv4.pool.sks-keyservers.net --recv-keys "$key" || \
-    gpg --keyserver hkp://pgp.mit.edu:80 --recv-keys "$key" ; \
+    gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key" || \
+    gpg --keyserver pgp.mit.edu --recv-keys "$key" || \
+    gpg --keyserver keyserver.pgp.com --recv-keys "$key" ; \
   done
+
 
 #
 # Download NodeJS
@@ -98,7 +99,7 @@ RUN sudo apt update && sudo apt install --no-install-recommends yarn
 #        questions/30215830/dockerfile-copy-keep-subdirectory-structure
 
 # Update the timestamp below to force copy of image-files during build
-ENV IMAGE_FILES_REFRESHED_AT 2021-09-15_10h05
+ENV IMAGE_FILES_REFRESHED_AT 2021-12-14_12h40
 
 COPY ./image-files/ /
 

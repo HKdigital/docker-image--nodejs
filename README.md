@@ -71,3 +71,19 @@ Build the docker image
 docker image ls
 # Shows hkdigital-nodejs-2021a
 ```
+
+## Extra: push to docker hub
+
+This is a generic instruction to push your images to `docker hub`. You must setup a (free) docker hub account and create the repository.
+
+```bash
+docker tag <existing-image> <hub-user>/<repo-name>[:<tag>]
+docker push <hub-user>/<repo-name>:<tag>
+```
+
+e.g.
+
+```bash
+docker tag hkdigital-nodejs-2021a hkdigital/nodejs-2021a
+docker push hkdigital/nodejs-2021a
+```

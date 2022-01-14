@@ -35,7 +35,7 @@ See also the folder `/examples`.
 Below an example of using the image in a docker-compose file
 
 ```yaml
-version: "3.8"
+version: "3.9"
 
 services:
   nodejs:

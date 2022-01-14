@@ -1,18 +1,7 @@
 # ........................................................................ About
-
-# This docker image contains a NodeJS installation and can be used to run a
-# NodeJS program. For example a backend server, but any other kind of node js
-# application (javascript/ecmascript) can be run too. In the folder
-# `/examples`, some calculation is done using a javascript file
 #
-# - Uses NodeJS to run /mnt/nodejs/index.js
-#   (when using the default ROOT_FOLDER=/mnt/nodejs)
+# @see README at https://github.com/HKdigital/docker-images--nodejs-2021a
 #
-# - Sets /etc/security/limits.conf
-# - Sets /etc/sysctl.conf
-#
-# Jens Kleinhout
-# hkdigital.nl
 
 # ......................................................................... FROM
 
@@ -23,11 +12,11 @@ MAINTAINER Jens Kleinhout "hello@hkdigital.nl"
 # .......................................................................... ENV
 
 # Update the timestamp below to force an apt-get update during build
-ENV APT_SOURCES_REFRESHED_AT 2021-12-14_12h40
+ENV APT_SOURCES_REFRESHED_AT 2022-01-14_11h12
 
 # ....................................................................... NodeJS
 
-ENV NODE_VERSION 16.13.1
+ENV NODE_VERSION 16.13.2
 
 #
 # @note gpg keys of nodejs releasers listed at
@@ -48,9 +37,7 @@ RUN set -ex \
     108F52B48DB57BB0CC439B2997B01419BD92F80A \
     B9E2F5981AA6E0CD28160D9FF13993A75599653C \
   ; do \
-    gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key" || \
-    gpg --keyserver pgp.mit.edu --recv-keys "$key" || \
-    gpg --keyserver keyserver.pgp.com --recv-keys "$key" ; \
+    gpg --keyserver keys.openpgp.org --recv-keys "$key"; \
   done
 
 
@@ -99,7 +86,7 @@ RUN sudo apt update && sudo apt install --no-install-recommends yarn
 #        questions/30215830/dockerfile-copy-keep-subdirectory-structure
 
 # Update the timestamp below to force copy of image-files during build
-ENV IMAGE_FILES_REFRESHED_AT 2021-12-14_12h40
+ENV IMAGE_FILES_REFRESHED_AT 2022-01-14_11h12
 
 COPY ./image-files/ /
 

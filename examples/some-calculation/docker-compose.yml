@@ -5,12 +5,12 @@ services:
     image: hkdigital/nodejs-2021a   # docker-hub
     # image: hkdigital-nodejs-2021a   # local
 
-    restart: on-failure # "no"|always|on-failure|unless-stopped
+    restart: always # "no"|always|on-failure|unless-stopped
 
     environment:
-      - HEAP_SIZE_MB=1024
-      - WATCH=1 # Use `nodemon` instead of `node`
-      - PARAMS=--radius=1 --calculation=surface
+      - HEAP_SIZE_MB=1024                        # Program heap size
+      - WATCH=1                                  # Use `nodemon` instead of `node`
+      - PARAMS=--radius=1 --calculation=surface  # Program arguments
 
     volumes:
       - ./volumes/some-calculation:/mnt/nodejs

@@ -89,3 +89,9 @@ e.g.
 docker tag hkdigital-nodejs-2021a hkdigital/nodejs-2021a
 docker push hkdigital/nodejs-2021a
 ```
+
+# Buy me a coffee
+
+If you like my work, please support me:
+
+https://www.buymeacoffee.com/hkjens

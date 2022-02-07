@@ -41,8 +41,8 @@ version: "3.9"
 
 services:
   nodejs:
-    image: hkdigital/nodejs-2021a     # docker-hub
-    # image: hkdigital-nodejs-2021a     # local    
+    image: hkdigital/nodejs     # docker-hub
+    # image: hkdigital-nodejs     # local    
 
     restart: on-failure # "no"|always|on-failure|unless-stopped
 
@@ -62,8 +62,8 @@ Clone the latest commit from github into a local working directory
 
 ```bash
 git clone --depth 1 \
-  git@github.com:hkdigital/docker-images--nodejs-2021a.git \
-  hkdigital-nodejs-2021a
+  git@github.com:hkdigital/docker-images--nodejs.git \
+  hkdigital-nodejs
 ```
 
 Build the docker image
@@ -71,7 +71,7 @@ Build the docker image
 ```bash
 ./build-latest-image.sh
 docker image ls
-# Shows hkdigital-nodejs-2021a
+# Shows hkdigital-nodejs
 ```
 
 ## Extra: push to docker hub
@@ -86,8 +86,8 @@ docker push <hub-user>/<repo-name>:<tag>
 e.g.
 
 ```bash
-docker tag hkdigital-nodejs-2021a hkdigital/nodejs-2021a
-docker push hkdigital/nodejs-2021a
+docker tag hkdigital-nodejs hkdigital/nodejs
+docker push hkdigital/nodejs
 ```
 
 # Buy me a coffee

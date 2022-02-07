@@ -1,18 +1,18 @@
 # ........................................................................ About
 #
-# @see README at https://github.com/HKdigital/docker-images--nodejs-2021a
+# @see README at https://github.com/HKdigital/docker-images--nodejs
 #
 
 # ......................................................................... FROM
 
-FROM hkdigital/debian-slim-2021a
+FROM hkdigital/debian-slim
 
 MAINTAINER Jens Kleinhout "hello@hkdigital.nl"
 
 # .......................................................................... ENV
 
 # Update the timestamp below to force an apt-get update during build
-ENV APT_SOURCES_REFRESHED_AT 2022-01-14_11h12
+ENV APT_SOURCES_REFRESHED_AT 2022-02-07_15h48
 
 # ....................................................................... NodeJS
 
@@ -86,7 +86,7 @@ RUN sudo apt update && sudo apt install --no-install-recommends yarn
 #        questions/30215830/dockerfile-copy-keep-subdirectory-structure
 
 # Update the timestamp below to force copy of image-files during build
-ENV IMAGE_FILES_REFRESHED_AT 2022-01-14_11h12
+ENV IMAGE_FILES_REFRESHED_AT 2022-02-07_15h48
 
 COPY ./image-files/ /
 

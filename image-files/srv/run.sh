@@ -10,7 +10,7 @@
 #
 
 echo
-echo "Running [run.sh] from image [hkdigital-nodejs-2021a]"
+echo "Running [run.sh] from image [hkdigital/nodejs]"
 echo "- $(date)"
 
 echo

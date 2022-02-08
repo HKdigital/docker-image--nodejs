@@ -92,6 +92,6 @@ docker push hkdigital/nodejs
 
 # Buy me a coffee
 
-If you like my work, please support me:
+If you like our work and would like us to share some more code, please support us:
 
-https://www.buymeacoffee.com/hkjens
+[Buy me a coffee](https://www.buymeacoffee.com/hkdigital)

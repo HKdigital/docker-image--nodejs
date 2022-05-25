@@ -12,11 +12,11 @@ MAINTAINER Jens Kleinhout "hello@hkdigital.nl"
 # .......................................................................... ENV
 
 # Update the timestamp below to force an apt-get update during build
-ENV APT_SOURCES_REFRESHED_AT 2022-02-07_15h48
+ENV APT_SOURCES_REFRESHED_AT 2022-05-25_11h37
 
 # ....................................................................... NodeJS
 
-ENV NODE_VERSION 16.13.2
+ENV NODE_VERSION 16.15.0
 
 #
 # @note gpg keys of nodejs releasers listed at
@@ -86,10 +86,10 @@ RUN sudo apt update && sudo apt install --no-install-recommends yarn
 #        questions/30215830/dockerfile-copy-keep-subdirectory-structure
 
 # Update the timestamp below to force copy of image-files during build
-ENV IMAGE_FILES_REFRESHED_AT 2022-02-07_15h48
+ENV IMAGE_FILES_REFRESHED_AT 2022-05-25_11h37
 
 COPY ./image-files/ /
 
 # ................................................................. EXPOSE PORTS
 
-# @note no default ports are exports
+# @note no default ports are exported

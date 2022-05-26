@@ -21,13 +21,6 @@ In the folder `/examples`, a node js program shows how to do a simple calculatio
 
 - Executes the NodeJs program not as root, but as normal user `nodejs`
 
-- Configures the maximum number of open files in /etc/security/limits.conf
-- Configures TCP parameters in /etc/sysctl.conf
-
-## Versioning
-
-The folder and repository names have a year and a letter appended to their names. The idea is that there will be no breaking changes when the same year and letter combination are used.
-
 # Usage
 
 ## Just try it out (using docker-compose)
@@ -90,13 +83,11 @@ docker tag hkdigital-nodejs hkdigital/nodejs
 docker push hkdigital/nodejs
 ```
 
-# Buy me a coffee
+# Support cancer research
 
-If you like our work and would like us to share some more code, please support us:
+If you like our work and would like us to share some more code, please support us! 
 
-[Buy me a coffee](https://www.buymeacoffee.com/hkdigital)
-
-## Support cancer research
+Currently we're collecting money for cancer research:
 
 Alpe d'HuZes is a unique sporting event where as much money as possible is raised for cancer research and for improving the quality of life of people with cancer. On a single day, 5000 participants will bike, hike or run the Alpe d'Huez. Attempting a maximum of six climbs, under the motto 'giving up is not an option'. 
 

@@ -55,7 +55,7 @@ Clone the latest commit from github into a local working directory
 
 ```bash
 git clone --depth 1 \
-  git@github.com:hkdigital/docker-images--nodejs.git \
+  git@github.com:hkdigital/docker-image--nodejs.git \
   hkdigital-nodejs
 ```
 
@@ -82,13 +82,3 @@ e.g.
 docker tag hkdigital-nodejs hkdigital/nodejs
 docker push hkdigital/nodejs
 ```
-
-# Support cancer research
-
-If you like our work and would like us to share some more code, please support us! 
-
-Currently we're collecting money for cancer research:
-
-Alpe d'HuZes is a unique sporting event where as much money as possible is raised for cancer research and for improving the quality of life of people with cancer. On a single day, 5000 participants will bike, hike or run the Alpe d'Huez. Attempting a maximum of six climbs, under the motto 'giving up is not an option'. 
-
-https://www.opgevenisgeenoptie.nl/fundraisers/JensKleinhout

@@ -55,13 +55,13 @@ If you just want to use the image to create a container, there is no need to bui
 
 Building the image locally is usually done for development of the image itself.
 
-## Get a workingcopy for the repository
+## Get a working copy from the repository
 
 Clone the latest commit from github into a local working directory.
 
 ```bash
 git clone --depth 1 \
-  git@github.com:hkdigital/docker-images--nodejs.git \
+  git@github.com:hkdigital/docker-image--nodejs.git \
   hkdigital-nodejs
 ```
 
@@ -72,20 +72,3 @@ git clone --depth 1 \
 docker image ls
 # Shows hkdigital-nodejs
 ```
-
-## Extra: push to docker hub
-
-This is a generic instruction to push your images to `docker hub`. You must setup a (free) docker hub account and create the repository.
-
-```bash
-docker tag <existing-image> <hub-user>/<repo-name>[:<tag>]
-docker push <hub-user>/<repo-name>:<tag>
-```
-
-e.g.
-
-```bash
-docker tag hkdigital-nodejs hkdigital/nodejs
-docker push hkdigital/nodejs
-```
-

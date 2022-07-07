@@ -12,25 +12,33 @@ MAINTAINER Jens Kleinhout "hello@hkdigital.nl"
 # .......................................................................... ENV
 
 # Update the timestamp below to force an apt-get update during build
-ENV APT_SOURCES_REFRESHED_AT 2022-05-25_11h37
+ENV APT_SOURCES_REFRESHED_AT 2022-07-07_14h05
 
 # ....................................................................... NodeJS
 
-ENV NODE_VERSION 16.15.0
+#
+# Good reason to upgrade to NodeJs v18 (not LTS): browser-compatible API's
+# @see https://nodejs.org/en/blog/announcements/v18-release-announce/
+#
+ENV NODE_VERSION 18.4.0
 
 #
 # @note gpg keys of nodejs releasers listed at
 #       https://github.com/nodejs/node#release-team
 #       https://github.com/nodejs/node#release-keys
+#
 
 RUN set -ex \
   && for key in \
     4ED778F539E3634C779C87C6D7062848A1AB005C \
+    141F07595B7B3FFE74309A937405533BE57C7D57 \
     94AE36675C464D64BAFA68DD7434390BDBE9B9C5 \
     74F12602B6F1C4E913FAA37AD3A89613643B6201 \
     71DCFD284A79C3B38668286BC97EC7A07EDE3FC1 \
+    61FC681DFB92A079F1685E77973F295594EC4689 \
     8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600 \
     C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8 \
+    890C08DB8579162FEE0DF9DB8BEAB4DFCF555EF4 \
     C82FA3AE1CBEDC6BE46B9360C43CEC45C17AB93C \
     DD8F2338BAE7501E3DD5AC78C273792F7D83545D \
     A48C2BEE680E841632CD4E44F07496B3EB3C1762 \
@@ -39,7 +47,6 @@ RUN set -ex \
   ; do \
     gpg --keyserver keys.openpgp.org --recv-keys "$key"; \
   done
-
 
 #
 # Download NodeJS
@@ -86,7 +93,7 @@ RUN sudo apt update && sudo apt install --no-install-recommends yarn
 #        questions/30215830/dockerfile-copy-keep-subdirectory-structure
 
 # Update the timestamp below to force copy of image-files during build
-ENV IMAGE_FILES_REFRESHED_AT 2022-05-25_11h37
+ENV IMAGE_FILES_REFRESHED_AT 2022-07-07_14h05
 
 COPY ./image-files/ /
 

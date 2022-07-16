@@ -120,6 +120,12 @@ then
     "${PROJECT_FOLDER}/link-libs.sh"
   fi
 
+  #
+  # Update rights after running yarn install
+  # - Updates folder node_modules and yarn.lock
+  #
+  chown -R "${USER}:${USER}" "${PROJECT_FOLDER}"
+
 else
   echo "- Folder [node_modules] exists"
   echo "- Skipping [yarn install]"

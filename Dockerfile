@@ -12,7 +12,7 @@ MAINTAINER Jens Kleinhout "hello@hkdigital.nl"
 # .......................................................................... ENV
 
 # Update the timestamp below to force an apt-get update during build
-ENV APT_SOURCES_REFRESHED_AT 2022-07-16_13h30
+ENV APT_SOURCES_REFRESHED_AT 2022-08-21_16h36
 
 # ....................................................................... NodeJS
 
@@ -20,7 +20,7 @@ ENV APT_SOURCES_REFRESHED_AT 2022-07-16_13h30
 # Good reason to upgrade to NodeJs v18 (not LTS): browser-compatible API's
 # @see https://nodejs.org/en/blog/announcements/v18-release-announce/
 #
-ENV NODE_VERSION 18.6.0
+ENV NODE_VERSION 18.7.0
 
 #
 # @note gpg keys of nodejs releasers listed at

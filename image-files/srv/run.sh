@@ -13,10 +13,17 @@ echo
 echo "Running [run.sh] from image [hkdigital/nodejs]"
 echo "- $(date)"
 
-echo
-echo "Setup nodejs user"
+# ........................................... Expand _FILE environment variables
+
+#
+# Expand environment variables that end with _FILE
+#
+source ./expand-file-environment-vars.sh
 
 # .................................................................. NodeJS User
+
+echo
+echo "Setup nodejs user"
 
 USER="nodejs"
 id "${USER}" &> /dev/null || useradd "${USER}"
@@ -25,8 +32,6 @@ usermod -u 1000 "${USER}"
 groupmod -g 1001 "${USER}"
 
 passwd -d "${USER}"
-
-MIN_RUN_TIME_MS=5000
 
 # .................................................................. Root folder
 
@@ -135,6 +140,8 @@ fi
 
 echo
 echo "Starting NodeJS"
+
+MIN_RUN_TIME_MS=5000
 
 # Find index script
 

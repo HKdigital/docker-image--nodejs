@@ -12,15 +12,11 @@ MAINTAINER Jens Kleinhout "hello@hkdigital.nl"
 # .......................................................................... ENV
 
 # Update the timestamp below to force an apt-get update during build
-ENV APT_SOURCES_REFRESHED_AT 2022-11-10_09h48
+ENV APT_SOURCES_REFRESHED_AT 2023-05-22_12h05
 
 # ....................................................................... NodeJS
 
-#
-# Good reason to upgrade to NodeJs v18 (not LTS): browser-compatible API's
-# @see https://nodejs.org/en/blog/announcements/v18-release-announce/
-#
-ENV NODE_VERSION 18.12.1
+ENV NODE_VERSION 18.16.0
 
 #
 # @note gpg keys of nodejs releasers listed at
@@ -33,7 +29,7 @@ RUN set -ex \
     4ED778F539E3634C779C87C6D7062848A1AB005C \
     141F07595B7B3FFE74309A937405533BE57C7D57 \
     74F12602B6F1C4E913FAA37AD3A89613643B6201 \
-    61FC681DFB92A079F1685E77973F295594EC4689 \
+    DD792F5973C6DE52C432CBDAC77ABFA00DDBF2B7 \
     8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600 \
     C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8 \
     890C08DB8579162FEE0DF9DB8BEAB4DFCF555EF4 \
@@ -88,7 +84,7 @@ RUN sudo apt update && sudo apt install --no-install-recommends yarn
 #        questions/30215830/dockerfile-copy-keep-subdirectory-structure
 
 # Update the timestamp below to force copy of image-files during build
-ENV IMAGE_FILES_REFRESHED_AT 2022-11-10_09h48
+ENV IMAGE_FILES_REFRESHED_AT 2023-05-22_12h05
 
 COPY ./image-files/ /
 
